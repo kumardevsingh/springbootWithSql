@@ -30,9 +30,10 @@ public class EmployeeController {
         return service.getEmployeeByName(name);
     }
 
+    //update employee
     @PutMapping("/update")
-    public Employee findEmployeeById(@PathVariable Employee employee){
-        return service.updateEmployee(employee);
+    public Employee updateEmployeeById(@RequestBody Employee employee){
+            return service.updateEmployee(employee);
     }
 
     @DeleteMapping("delete/{id}")
